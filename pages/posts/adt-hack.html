@@ -1,0 +1,39 @@
+title: ADT Hack
+headline: ADT SafeWatch 3000 + New Baby = Stop The Beeping!
+author: Anthony Virtuoso
+date: 16-08-2016
+
+{% extends "post.html" %}
+{% block body %}
+
+{% filter markdown %}
+
+<p class="meta">16 Aug 2016 - New Jersey</p>
+
+My wife and I had our first child, Luca, about 7 months ago now. One thing we recently realized is that the intructions ADT had given us to arm our home security system **without** the annoying count down beeps really didn't work. While it did silence the annoying start up beeps, it also silently disabled all but a few sensor types. Until I work up th courage to abandon ADT for a company that has actually invested in its offerings, I'll have to live with their crummy customer service.
+
+But... I don't have to live with choosing between using all the alarm's sensors and not waking up our baby. So, a few snips and a couple wire connectors and I've added a hard switch to silence the keypad right before we arm the panel at night. This allows us to arm the system in any mode we please without the baby rousing 'Beep....Beep...Armed Away' that ADT forces upon us all as a way to minimize false alarms. 
+
+In fact, you'll be interested to know that most ADT panels do **not** dial their monitoring center until the Alarm has been sounding for 60 seconds! This is yet another strategy for reducing false positives but its not something they really advertise. I've tested it and generally up to ~60 seconds before the panel dials out. If you disable the alarm before that, no one gets notified.
+
+Ok, so here are some images of the modification.
+
+##Step 1 - Open The Panel
+
+There are likely two slots at the botton or top of your panel that will allow it to unhinge from the base plate. You can insert a flat head screw driver into these slots until you hear a click. Then the face should swing away from those slots allowing you to access the internal of the panel as I've done below.
+
+<center>![ADT Panel Internals]({{ site.url }}/static/images/adt-hack-panel.jpg)</center>
+
+In this image you can also see how I have bypassed the ground wire on the Piezzio Speaker.
+
+##Step 2 - Bypass The Piezzio Speaker
+
+Here we can see the finished product with the bypass wire connector outside of the panel. I didn't have a switch handy or I'd have used one but this gets the job done and the bypass tucks nicely behind the panel when not needed.
+
+<center>![ADT Panel Finished]({{ site.url }}/static/images/adt-hack-panel-bypass.jpg)</center>
+
+Keep in mind this **does not** bypass your alarm or the siren, only the keypad speaker!
+
+
+{% endfilter %}
+{% endblock body %}

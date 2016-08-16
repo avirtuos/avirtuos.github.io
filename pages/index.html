@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block content %}
+
+	<a id="resume" href="https://s3.amazonaws.com/virtuosopublic/Anthony+Virtuoso.pdf">Resume</a>
+
+	<a id="github" href="https://github.com/avirtuos">GitHub/avirtuos</a>
+
+	<a id="linkedin" href="https://www.linkedin.com/in/avirtuos">LinkedIn</a>
+
+	<section id="wrapper">
+		<header id="header">
+			<a id="title" class="index">Anthony Virtuoso</a>
+			<p class="small">Check out more of my work on <a href='http://github.com/avirtuos'>GitHub</a>.</p>
+		</header> 
+<header id="header">
+		<ul id="post-list" style="margin-top: 20px;">
+				<li> 
+				Featured Project: 
+					<a href='https://github.com/avirtuos/ros_hercules'>Hercules Autonomous Rover<h2> Most of my spare time is currently going into this project. It's built on Nvidia's Tegra TX1 with several LIDAR and Stero Camera's for Simultaneous Localization and Mapping.</h2></a>
+				</li>
+		</ul>
+</header>
+		<ul id="post-list">
+			{% for post in posts %}
+				<li> 
+					<a href='/{{ post.path }}'><aside class="dates">{{ post.date|date:"M j" }}</aside></a>
+					<a href='/{{ post.path }}'>{{ post.title }} <h2>{{ post.headline }}</h2></a>
+				</li>
+			{% endfor %}
+		</ul>
+
+		<!-- Uncomment for link to archive.
+		{% if posts|length >= 4 %}
+			<footer id="post-list-footer">
+				<a id="archive-link" href="archive.html"> <span class="arrow">&larr;</span> Archive</a>
+			</footer>
+		{% endif %}
+		-->
+
+		{% block footer %}
+			<footer id="footer">
+				<p class="small">A short description</p>
+			</footer>
+		{% endblock footer %}
+	</section>
+
+	<a href="http://cactusformac.com/?utm_source=templates&utm_medium=badge&utm_campaign=blog-template"><img id="badge" class="2x" src="{% static '/images/badge.png' %}"/></a>
+	
+{% endblock content %}
