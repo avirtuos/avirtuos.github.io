@@ -1,5 +1,8 @@
-# Cactus Example Blog
+# This is the data for my blog
 
-This is an example blog project for [Cactus](https://github.com/koenbok/Cactus). It provides a starting point for your own blog. Just download it, make sure you have [Cactus](https://github.com/koenbok/Cactus) installed and run `cactus serve`.
+The following directories and their contents are Copyright Anthony Virtuoso. You may not reuse anything therein without my permission:
 
-You can see it running [here](http://cactus-example-blog.s3-website-us-east-1.amazonaws.com/).
+* _posts/
+* images/
+
+All other directories and files are MIT Licensed. Feel free to use the HTML and CSS as you please. If you do use them, a link back to http://github.com/mojombo/jekyll would be appreciated, but is not required.
